@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import { FaPen } from 'react-icons/fa';
+import {FaTrashAlt} from "react-icons/fa"
 export default class TodoItem extends Component {
   render() {
     const { title, handleDelete, handleEdit,email,status,gender } = this.props;
@@ -11,10 +12,10 @@ export default class TodoItem extends Component {
         <ul>Gender:{gender}</ul>
         <div className="todo-icon">
           <span className="mx-2 text-success" onClick={handleEdit}>
-            <i className="fas fa-pen" />
+          <FaPen/>
           </span>
           <span className="mx-2 text-danger" onClick={handleDelete}>
-            <i className="fas fa-trash" />
+          <FaTrashAlt/>
           </span>
         </div>
       </li>
